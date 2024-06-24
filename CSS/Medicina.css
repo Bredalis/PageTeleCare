@@ -1,0 +1,53 @@
+
+* {
+	text-align: center;
+	color: #3B365F;	
+}
+
+nav {
+	background-color: #FFB5CA;
+}
+
+div h1 {
+	margin: 50px;
+	font-size: 50px;
+} 
+
+.contenido-enlaces {
+	background-color: #A3F6B2;
+	width: 20%;
+	padding: 20px;
+	border-radius: 1rem;
+}
+
+.contenido-enlaces table td {
+	text-align: left;
+}
+
+.contenido-enlaces a {
+	text-decoration: none;
+	color: #3B365F;	
+}
+
+.contenido-enlaces a:hover {
+	color: black;
+}
+
+#definicion img {
+	border-radius: 1rem;
+	float: right;
+	margin-right: 25%;
+}
+
+#definicion p {
+	width: 20%;
+	margin-left: 25%;
+}
+
+#tipos dt {
+	float: left;
+}
+
+#tipos dl dd {
+	width: 20%;
+}

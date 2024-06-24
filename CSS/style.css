@@ -1,0 +1,29 @@
+
+* {
+	text-align: center;
+	color: #3B365F;
+}
+
+nav {
+	background-color: #FFB5CA;
+}
+
+div p {
+	font-size: 25px;
+	width: 35%;
+	margin: 60px;
+	position: relative;
+	left: 26%;
+}
+
+div h1 {
+	font-size: 140px;
+}
+
+div h2 {
+	margin-top: 140px;
+	background-color: #C6D0F3;
+	width: 20%;
+	position: relative;
+	left: 40%;
+}
