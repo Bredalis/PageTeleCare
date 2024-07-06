@@ -2,10 +2,38 @@
 * {
 	text-align: center;
 	color: #3B365F;
+	font-family: "Georgia", sans-serif;
+}
+
+div p span, div h2 {
+	border-radius: 1rem;
 }
 
 nav {
 	background-color: #FFB5CA;
+}
+
+nav a img {
+	transition: transform 0.5s ease;	
+}
+
+nav a img:hover {
+	transform: scale(1.2);
+}
+
+video {
+	max-width: 30%;
+	border-radius: 1rem;
+	float: right;
+	margin-top: 100px;
+	margin-right: 150px;
+}
+
+audio {
+	float: right;
+	position: relative;
+	left: 26.5%;
+	top: 340px;
 }
 
 div p {
@@ -13,11 +41,17 @@ div p {
 	width: 35%;
 	margin: 60px;
 	position: relative;
-	left: 26%;
+	left: 5%;
+}
+
+div p span {
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #C6D0F3;
 }
 
 div h1 {
-	font-size: 140px;
+	font-size: 120px;
 }
 
 div h2 {
@@ -25,5 +59,5 @@ div h2 {
 	background-color: #C6D0F3;
 	width: 20%;
 	position: relative;
-	left: 40%;
+	left: 20%;
 }

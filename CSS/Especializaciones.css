@@ -1,26 +1,30 @@
 
 * {
 	text-align: center;
-	color: #3B365F;	
-	font-family: "Georgia", sans-serif;
+	color: #3B365F;
+	font-family: "Georgia", sans-serif;	
 }
 
 /* Propiedades compartidas  */
 
-nav, .contenido-enlaces, footer {
+nav, .contenido-enlaces, #tipos section, footer {
 	background-color: #FFB5CA;
 }
 
-#definicion h2, #tipos h2 {
+#definicion h2, #tipos h2, #descripcion h2 {
 	background-color: #3B365F;
 	color: whitesmoke;
-	width: 20%;
+	width: 35%;
 	border-radius: 1rem;
 	position: relative;
 }
 
-.contenido-enlaces, #definicion p, #tipos dl dd {
+.contenido-enlaces, #definicion p {
 	width: 20%;	
+}
+
+.contenido-enlaces, #definicion img, #tipos section, #descripcion img {
+	border-radius: 1rem;
 }
 
 nav a img {
@@ -39,7 +43,6 @@ div h1 {
 .contenido-enlaces {
 	position: fixed;
 	padding: 20px;
-	border-radius: 1rem;
 }
 
 .contenido-enlaces table td {
@@ -58,15 +61,15 @@ div h1 {
 
 #definicion audio {
 	position: fixed;
-	margin-left: 21%;
+	margin-left: 25%;
+	z-index: 1;
 }
 
 #definicion h2 {
-	left: 40%;
+	left: 33%;
 }
 
 #definicion img {
-	border-radius: 1rem;
 	margin: 30px;
 }
 
@@ -78,15 +81,51 @@ div h1 {
 
 #tipos h2 {
 	margin: 50px;
-	left: 36%;
+	left: 30%;
 }
 
-#tipos dl dd {
-	margin-top: 25px;
-	margin-bottom: 40px;
-	text-align: justify;	
+#tipos section {
+	width: 40%;
 	position: relative;
-	left: 40%;
+	left: 30%;
+	padding: 20px;
+	margin: 20px;
+	transition: width 0.5s ease;
+}
+
+#tipos section:hover {
+	width: 50%;
+}
+
+#tipos section p {
+	text-align: justify;
+}
+
+#tipos section p strong {
+	font-size: 20px;
+}
+
+#descripcion h2 {
+	left: 29%;
+	margin: 60px;
+}
+
+#descripcion img {
+	max-width: 30%;
+	transition: max-width 0.5s ease;
+}
+
+#descripcion img:hover {
+	max-width: 36%;
+}
+
+#descripcion p {
+	width: 30%;
+	position: relative;
+	left: 35%;
+	margin-top: 20px;
+	margin-bottom: 80px;
+	text-align: justify;
 }
 
 footer {
