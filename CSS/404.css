@@ -18,3 +18,7 @@ a {
 	color: black;
 	font-size: 20px;
 }
+
+audio {
+	margin: 20px;
+}
