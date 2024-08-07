@@ -5,7 +5,7 @@
 	font-family: "Georgia", sans-serif;
 }
 
-div p span, div h2 {
+main p span, main h2 {
 	border-radius: 1rem;
 }
 
@@ -36,7 +36,7 @@ audio {
 	top: 340px;
 }
 
-div p {
+main p {
 	font-size: 25px;
 	width: 35%;
 	margin: 60px;
@@ -44,20 +44,77 @@ div p {
 	left: 5%;
 }
 
-div p span {
+main p span {
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: #C6D0F3;
 }
 
-div h1 {
+main h1 {
 	font-size: 120px;
 }
 
-div h2 {
+main h2 {
 	margin-top: 140px;
 	background-color: #C6D0F3;
 	width: 20%;
 	position: relative;
 	left: 20%;
+}
+
+footer {
+    background-color: #FFB5CA;
+    margin-top: 10%;
+    padding: 100px;
+    font-size: 18px;
+}
+
+footer img {
+    margin: 25px;
+    position: relative;
+    right: 40%;
+    bottom: 60px;
+}
+
+footer a {
+    color: black;
+	text-decoration: none;
+}
+
+footer a:hover {
+    color: whitesmoke;
+}
+
+footer ul {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 100px;
+    text-align: justify;
+}
+
+footer p {
+    text-align: right;
+    margin-bottom: -10px;
+    color: black;
+}
+
+/* Animacion */
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.animacion {
+    opacity: 0;
+    position: relative;
+    top: 50px;
+    animation: slide-up 1s ease-out forwards;
+    animation-delay: 0.5s;
 }
