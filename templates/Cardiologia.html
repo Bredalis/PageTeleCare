@@ -1,0 +1,95 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Cardiología</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Especializaciones.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Cardiología ✨</h1>
+		<div class="contenido-enlaces">
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#descripcion">03. Descripción del Especialista</a>
+					</td>
+				</tr>		
+			</table>
+		</div>		
+
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Cardiologia.mp3') }}" controls></audio>
+
+			<h2 class="animacion">01. Definición de Cardiología</h2>
+			<img src="{{ url_for('static', filename='IMG/Cardiologo.jpg') }}" alt="Cardiología" class="animacion">
+
+			<p>
+				La cardiología es la rama de la medicina especializada en el diagnóstico, tratamiento y prevención de enfermedades del corazón y del sistema cardiovascular. Los cardiólogos son médicos expertos en evaluar la salud del corazón, desde problemas simples hasta enfermedades complejas que afectan su funcionamiento.
+			</p>		
+		</div>
+
+		<div id="tipos" class="animacion">
+			<h2>02. Tipos de Cardiología</h2>
+
+			<section>
+				<p>
+					<strong>Cardiología Clínica</strong>: Se centra en el diagnóstico y tratamiento de enfermedades cardiovasculares mediante el uso de herramientas como electrocardiogramas (ECG), ecocardiografías y pruebas de esfuerzo. Los cardiólogos clínicos manejan condiciones como la hipertensión arterial, la insuficiencia cardíaca y las arritmias.
+				</p>
+			</section>
+			<section>
+				<p>
+					<strong>Cardiología Intervencionista</strong>: Utiliza procedimientos mínimamente invasivos para tratar enfermedades cardiovasculares, como la angioplastia coronaria y la colocación de stents para abrir arterias bloqueadas. Los cardiólogos intervencionistas son especialistas en técnicas que restauran el flujo sanguíneo al corazón.
+				</p>	
+			</section>
+			<section>
+				<p>
+					<strong>Electrofisiología Cardíaca</strong>: Se enfoca en el estudio y tratamiento de las arritmias cardíacas, que son alteraciones en el ritmo eléctrico del corazón. Los electrofisiólogos cardíacos utilizan estudios electrofisiológicos para diagnosticar y técnicas como la ablación por catéter para corregir ritmos anormales.
+				</p>		
+			</section>
+			<section>
+				<p>
+					<strong>Cardiología Preventiva</strong>: Se concentra en la prevención de enfermedades cardiovasculares a través de la educación, cambios en el estilo de vida y el tratamiento temprano de factores de riesgo como la hipertensión, el colesterol alto y la diabetes. Los cardiólogos preventivos promueven hábitos saludables y estrategias de manejo del riesgo cardiovascular.
+				</p>
+			</section>
+		</div>
+
+		<div id="descripcion">
+			<h2 class="animacion">03. Descripcion del Especialista</h2>
+
+			<a href="https://hf.co/chat/assistant/66775f09549d7d61e079240b" target="_blank">
+				<img src="{{ url_for('static', filename='IMG/Chatbot_Cardiologia.png') }}" class="animacion" alt="Cardiologia">
+			</a>
+
+			<p>
+				Esta especializados en el diagnóstico y tratamiento de enfermedades del corazón y los vasos sanguíneos, incluyendo la prevención de enfermedades cardiovasculares y el manejo de condiciones crónicas como la hipertensión y la insuficiencia cardíaca.
+			</p>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}
+</body>
+</html>

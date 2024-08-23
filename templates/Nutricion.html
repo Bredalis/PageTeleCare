@@ -1,0 +1,95 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Nutrición</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Especializaciones.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Nutrición ✨</h1>
+		<div class="contenido-enlaces">
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#descripcion">03. Descripción del Especialista</a>
+					</td>
+				</tr>		
+			</table>
+		</div>
+
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Nutriologo.mp3') }}" controls></audio>
+
+			<h2 class="animacion">01. Definición de Nutrición</h2>
+			<img src="{{ url_for('static', filename='IMG/Nutriologo.jpg') }}" alt="Nutriologo" class="animacion">
+
+			<p>
+				La nutrición es el estudio de los alimentos en relación con la salud y el bienestar humano. Se centra en cómo los nutrientes en los alimentos son procesados, digeridos, absorbidos, utilizados y excretados por el cuerpo humano. Los nutricionistas y dietistas son profesionales especializados en evaluar y aconsejar sobre la alimentación adecuada para promover la salud y prevenir enfermedades.
+			</p>		
+		</div>
+
+		<div id="tipos" class="animacion">
+			<h2>02. Tipos de Nutrición</h2>
+
+			<section>
+				<p>
+					<strong>Nutrición Clínica</strong>: Especialidad que se enfoca en la aplicación de principios de nutrición en el tratamiento de enfermedades y trastornos específicos. Los nutricionistas clínicos evalúan las necesidades nutricionales individuales, diseñan planes dietéticos personalizados y monitorean la respuesta del paciente para optimizar la salud.
+				</p>
+			</section>
+			<section>
+				<p>
+					<strong>Nutrición Deportiva</strong>: Se centra en las necesidades nutricionales de atletas y personas físicamente activas para mejorar el rendimiento deportivo, acelerar la recuperación y optimizar la composición corporal. Los nutricionistas deportivos desarrollan estrategias alimentarias adaptadas a las demandas específicas del entrenamiento y la competencia.
+				</p>	
+			</section>
+			<section>
+				<p>
+					<strong>Nutrición Geriátrica</strong>: Especialidad enfocada en las necesidades dietéticas de adultos mayores. Los nutricionistas geriátricos abordan problemas de salud relacionados con la edad, como la pérdida muscular, la osteoporosis y la disminución de la función cognitiva, mediante la adaptación de planes dietéticos que promuevan la salud y la calidad de vida en la vejez.
+				</p>		
+			</section>
+			<section>
+				<p>
+					<strong>Nutrición Oncológica</strong>: Especialidad que evalúa y maneja las necesidades nutricionales de los pacientes con cáncer. Los nutricionistas oncólogos desarrollan planes dietéticos adaptados para mejorar la tolerancia al tratamiento, mantener la masa corporal y mejorar la calidad de vida durante y después de la terapia contra el cáncer.
+				</p>
+			</section>
+		</div>
+
+		<div id="descripcion">
+			<h2 class="animacion">03. Descripcion del Especialista</h2>
+
+			<a href="https://hf.co/chat/assistant/66775d2a549d7d61e079231c" target="_blank">
+				<img src="{{ url_for('static', filename='IMG/Chatbot_Nutricion.png') }}" alt="Nutriologo" class="animacion">
+			</a>
+
+			<p>
+				Los nutricionistas son expertos en alimentación y nutrición, proporcionando asesoramiento personalizado para promover una alimentación saludable y prevenir enfermedades relacionadas con la dieta.
+			</p>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}	
+</body>
+</html>

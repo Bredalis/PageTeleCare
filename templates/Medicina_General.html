@@ -1,0 +1,95 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Medicina General</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Especializaciones.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Medicina General ✨</h1>
+		<div class="contenido-enlaces">
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#descripcion">03. Descripción del Especialista</a>
+					</td>
+				</tr>		
+			</table>
+		</div>
+
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Medicina_General.mp3') }}" controls></audio>
+			
+			<h2 class="animacion">01. Definición de Medicina General</h2>
+			<img src="{{ url_for('static', filename='IMG/Medico_General.jpg') }}" alt="Medicina General" class="animacion">
+
+			<p>
+				La Medicina General, también conocida como Medicina Familiar o Medicina Interna en algunos contextos, es una especialidad médica que se centra en la atención integral y continua del individuo y la familia a lo largo de la vida. Los médicos generales son responsables de la prevención, diagnóstico y tratamiento de una amplia variedad de enfermedades y condiciones médicas, así como de la promoción de la salud y el bienestar general.
+			</p>		
+		</div>
+
+		<div id="tipos" class="animacion">
+			<h2>02. Tipos de Medicina General</h2>
+
+			<section>
+				<p>
+					<strong>Medicina Familiar</strong>: Se centra en la atención médica continua e integral de individuos y familias a lo largo de sus vidas. Los médicos de familia tratan una variedad de enfermedades y condiciones, proporcionando atención preventiva, tratamiento de enfermedades agudas y manejo de enfermedades crónicas. Se enfocan en el cuidado holístico, considerando el contexto familiar y social del paciente.
+				</p>
+			</section>
+			<section>
+				<p>
+					<strong>Medicina Interna</strong>: Los médicos internistas se especializan en el diagnóstico, tratamiento y prevención de enfermedades en adultos. Tratan una amplia gama de condiciones médicas complejas y crónicas, como diabetes, hipertensión, enfermedades cardíacas y respiratorias. A menudo actúan como consultores para otros especialistas y brindan atención primaria a los adultos.
+				</p>	
+			</section>
+			<section>
+				<p>
+					<strong>Pediatría</strong>: Aunque es una especialidad en sí misma, la pediatría a menudo se superpone con la medicina general en la atención de niños y adolescentes. Los pediatras se enfocan en el crecimiento y desarrollo de los niños, así como en la prevención y tratamiento de enfermedades pediátricas.
+				</p>		
+			</section>
+			<section>
+				<p>
+					<strong>Geriatría</strong>: Esta subespecialidad de la medicina general se centra en la atención de los ancianos. Los geriatras abordan los problemas de salud únicos de la población envejecida, incluyendo enfermedades crónicas, polifarmacia, movilidad, y problemas cognitivos como la demencia.
+				</p>
+			</section>
+		</div>
+
+		<div id="descripcion">
+			<h2 class="animacion">03. Descripcion del Especialista</h2>
+
+			<a href="https://hf.co/chat/assistant/66775d901d58bdca57b279b2" target="_blank">
+				<img src="{{ url_for('static', filename='IMG/Chatbot_Medico_General.png') }}" alt="Medicina General" class="animacion">
+			</a>
+
+			<p>
+				Los médicos generales, también conocidos como médicos de familia, proporcionan atención médica integral a pacientes de todas las edades y géneros, tratando una amplia gama de condiciones médicas y coordinando la atención especializada cuando es necesario.
+			</p>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}	
+</body>
+</html>

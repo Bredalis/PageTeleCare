@@ -1,0 +1,76 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Sobre Nosotros</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Sobre_Nosotros.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Sobre Nosotros ✨</h1>
+		<div class="contenido-enlaces">
+
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+			<br>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#quienes_somos">01. ¿Quíenes somos?</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#por_que">02. ¿Por qué existimos?</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#ideales">03. Ideales de la empresa</a>
+					</td>
+				</tr>				
+			</table>
+		</div>
+
+		<div id="quienes_somos" class="contenido">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Sobre_Nosotros.mp3') }}" controls></audio>
+
+			<h2 class="animacion">01. ¿Quíenes somos?</h2>
+			<img src="{{ url_for('static', filename='IMG/Logo.png') }}" alt="Logo" class="animacion">
+			
+			<p>
+				En TeleSalud, somos pioneros en ofrecer chatbots especializados en áreas críticas de la medicina como Nutrición, Pediatría, Psicología, Cardiología, Primeros Auxilios, Medicina General, y Ginecología y Obstetricia. Nuestro objetivo es proporcionar a los pacientes un acceso fácil y rápido a orientación médica de calidad a través de conversaciones inteligentes y empáticas. Con nuestros chatbots, recibirás el apoyo y la información que necesitas, siempre disponibles para ayudarte a cuidar de tu salud desde la comodidad de tu hogar.
+			</p>		
+		</div>
+
+		<div id="por_que" class="contenido">
+			<h2 class="animacion">02. ¿Por qué existimos?</h2>
+			<img src="{{ url_for('static', filename='IMG/Empresa_1.jpg') }}" alt="Empresa" class="animacion">
+			<p>
+				En TeleSalud, existimos para revolucionar la manera en que las personas acceden a la atención médica. Reconocemos la importancia de brindar apoyo inmediato y accesible, sin importar la hora o el lugar. A través de nuestros chatbots especializados en diversas áreas de la medicina, nos esforzamos por romper las barreras tradicionales de la atención médica, ofreciendo a los pacientes una alternativa innovadora y eficiente para cuidar de su salud.
+			</p>
+		</div>
+
+		<div id="ideales" class="contenido">
+			<h2 class="animacion">03. Ideales de la empresa</h2>
+			<img src="{{ url_for('static', filename='IMG/Empresa_2.jpg') }}" alt="Empresa" class="animacion">
+			<p>
+				En TeleSalud, nos guiamos por ideales firmes y claros: accesibilidad, empatía, y excelencia. Creemos que todos merecen un acceso rápido y sencillo a la atención médica, sin importar su ubicación. Nos comprometemos a brindar un apoyo empático y personalizado a cada paciente, entendiendo y respondiendo a sus necesidades específicas. Además, aspiramos a la excelencia en cada interacción, asegurando que nuestros chatbots ofrezcan la información y orientación más precisa y actualizada para mejorar la calidad de vida de quienes confían en nosotros.
+			</p>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}	
+</body>
+</html>

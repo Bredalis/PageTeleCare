@@ -1,0 +1,95 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Psicología</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Especializaciones.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Psicología ✨</h1>
+		<div class="contenido-enlaces">
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#descripcion">03. Descripción del Especialista</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Psicologia.mp3') }}" controls></audio>
+			
+			<h2 class="animacion">01. Definición de Psicología</h2>
+			<img src="{{ url_for('static', filename='IMG/Psicologo.jpg') }}" alt="Psicología" class="animacion">
+
+			<p>
+				La psicología es la disciplina científica que estudia el comportamiento y los procesos mentales de los individuos. Utiliza métodos sistemáticos de investigación para comprender cómo las personas perciben, piensan, sienten, aprenden, se relacionan y se adaptan al entorno.
+			</p>		
+		</div>
+
+		<div id="tipos" class="animacion">
+			<h2>02. Tipos de Psicología</h2>
+
+			<section>
+				<p>
+					<strong>Psicología Clínica</strong>: Se enfoca en la evaluación, diagnóstico, tratamiento y prevención de trastornos mentales y emocionales en individuos. Los psicólogos clínicos utilizan terapias psicológicas y técnicas de intervención para ayudar a sus pacientes a mejorar su bienestar mental.
+				</p>
+			</section>
+			<section>
+				<p>
+					<strong>Psicología Educativa</strong>: Estudia los procesos de aprendizaje, enseñanza y desarrollo educativo en entornos académicos. Los psicólogos educativos trabajan con estudiantes, maestros y sistemas educativos para mejorar la enseñanza, el rendimiento académico y el desarrollo personal.
+				</p>	
+			</section>
+			<section>
+				<p>
+					<strong>Psicología Organizacional o Industrial</strong>: Se centra en el comportamiento humano en el lugar de trabajo y en las organizaciones. Los psicólogos organizacionales pueden estar involucrados en la selección de personal, la evaluación del desempeño, el desarrollo de liderazgo y la mejora del clima laboral.
+				</p>		
+			</section>
+			<section>
+				<p>
+					<strong>Psicología Social</strong>: Investiga cómo las interacciones sociales, las actitudes, las percepciones y los prejuicios afectan el comportamiento de los individuos y de los grupos. Los psicólogos sociales estudian temas como la conformidad, la persuasión, el conflicto intergrupal y la identidad social.
+				</p>
+			</section>
+		</div>
+
+		<div id="descripcion">
+			<h2 class="animacion">03. Descripcion del Especialista</h2>
+
+			<a href="https://hf.co/chat/assistant/66775c9f423387514efc3c1b" target="_blank">
+				<img src="{{ url_for('static', filename='IMG/Chatbot_Psicologia.png') }}" alt="Psicología" class="animacion">
+			</a>
+
+			<p>
+				Esta especializado en la mente y el comportamiento humano, proporcionando terapia y tratamiento para trastornos mentales y emocionales.
+			</p>
+		</div>
+	</main>	
+
+	{{ footer() }}
+	{{ scripts() }}	
+</body>
+</html>

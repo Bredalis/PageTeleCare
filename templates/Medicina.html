@@ -1,0 +1,76 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Medicina</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Medicina.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Medicina ✨</h1>
+		<div class="contenido-enlaces">
+
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+			<br>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Medicina.mp3') }}" controls></audio>
+
+			<h2 class="animacion">01. Definición</h2>
+			<img src="{{ url_for('static', filename='IMG/Medico.jpg') }}" alt="Medico" class="animacion">
+			
+			<p>
+				La medicina es el campo de la ciencia y la práctica dedicado al diagnóstico, tratamiento y prevención de enfermedades y trastornos en seres humanos y animales. Se fundamenta en el conocimiento de la anatomía, fisiología, bioquímica, patología y farmacología, entre otras disciplinas, para promover la salud y el bienestar mediante intervenciones terapéuticas basadas en evidencia científica.
+			</p>		
+		</div>
+
+		<div id="tipos">
+			<h2 class="animacion">02. Tipos</h2>
+
+			<dl>
+				<dt><img src="{{ url_for('static', filename='IMG/Psiquiatria.png') }}" alt="Psiquiatría" class="animacion"><br><h3>Psiquiatría</h3></dt>
+				<dd>
+					Área de la medicina dedicada al diagnóstico, tratamiento y prevención de trastornos mentales, emocionales y del comportamiento.				
+				</dd>
+
+				<dt><img src="{{ url_for('static', filename='IMG/Medicina_Interna.png') }}" alt="Medicina Interna" class="animacion"><br><h3>Medicina Interna</h3></dt>
+				<dd>
+					Especialidad médica que se enfoca en el diagnóstico, tratamiento y manejo de enfermedades en adultos. Los médicos internistas tienen un enfoque integral y manejan enfermedades complejas o múltiples condiciones médicas en pacientes.
+				</dd>
+
+				<dt><img src="{{ url_for('static', filename='IMG/Cirugia.png') }}" alt="Cirugía" class="animacion"><br><h3>Cirugía</h3></dt>
+				<dd>
+					Especialidad que involucra procedimientos quirúrgicos para el diagnóstico, tratamiento o corrección de condiciones médicas mediante intervenciones invasivas.				
+				</dd>
+			</dl>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}	
+</body>
+</html>
