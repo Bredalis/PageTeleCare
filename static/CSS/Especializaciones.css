@@ -5,8 +5,7 @@
 	font-family: "Georgia", sans-serif;	
 }
 
-/* Propiedades compartidas  */
-
+/* Propiedades compartidas */
 nav, .contenido-enlaces, #tipos section {
 	background-color: #FFB5CA;
 }
@@ -174,7 +173,7 @@ footer p {
     color: black;
 }
 
-/* Animacion */
+/* Animación */
 @keyframes slide-up {
     to {
         opacity: 1;
