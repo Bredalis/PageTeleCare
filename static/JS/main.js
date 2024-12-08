@@ -1,5 +1,5 @@
 
-// Ocultar el indice de contenido al estar sobre el footer
+// Ocultar el índice de contenido al estar sobre el footer
 document.addEventListener("scroll", function() {
     const enlaces = document.querySelector(".contenido-enlaces");
     const footer = document.querySelector("footer");
