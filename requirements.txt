@@ -1,2 +1,5 @@
 flask
+jinja2
+huggingface_hub
+python-dotenv
 gunicorn
