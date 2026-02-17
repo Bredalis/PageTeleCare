@@ -1,0 +1,133 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Primeros Auxilios</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Especializaciones.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Primeros Auxilios ✨</h1>
+		<div class="contenido-enlaces">
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#chat-modelo">03. Especialista</a>
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						<a href="#comentarios">04. Comentario</a>
+					</td>
+				</tr>	
+			</table>
+		</div>
+
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Primeros_Auxilios.mp3') }}" controls></audio>
+
+			<h2 class="animacion">01. Definición de Primeros Auxilios</h2>
+			<img src="{{ url_for('static', filename='IMG/Primeros_Auxilios.jpg') }}" alt="Primeros Auxilios" class="animacion">
+
+			<p>
+				Los primeros auxilios son las técnicas y procedimientos inmediatos que se aplican a una persona que ha sufrido una lesión o una enfermedad repentina, con el objetivo de mantener la vida, reducir el dolor y evitar el agravamiento de la situación hasta que se pueda recibir atención médica profesional. Estos cuidados iniciales son esenciales para estabilizar al paciente y aumentar las posibilidades de una recuperación favorable.
+			</p>		
+		</div>
+
+		<div id="tipos" class="animacion">
+			<h2>02. Tipos de Primeros Auxilios</h2>
+
+			<section>
+				<p>
+					<strong>Primeros Auxilios Básicos</strong>: Incluyen técnicas esenciales como reanimación cardiopulmonar (RCP), control de hemorragias, tratamiento de heridas y quemaduras menores, y el manejo de fracturas y esguinces. Estos procedimientos son fundamentales para mantener las funciones vitales del paciente hasta la llegada de los servicios de emergencia.
+				</p>
+			</section>
+			<section>
+				<p>
+					<strong>Primeros Auxilios en Situaciones de Emergencia</strong>: Procedimientos aplicados en casos de emergencias graves, como ataques cardíacos, accidentes cerebrovasculares, shock anafiláctico y envenenamientos. Estos primeros auxilios requieren un conocimiento más avanzado para manejar situaciones potencialmente mortales.
+				</p>	
+			</section>
+			<section>
+				<p>
+					<strong>Primeros Auxilios para Accidentes de Tránsito</strong>: Técnicas específicas para atender a víctimas de accidentes vehiculares. Incluyen la evaluación y estabilización de lesiones traumáticas, manejo de fracturas y control de hemorragias, así como medidas para prevenir lesiones adicionales durante el rescate.
+				</p>		
+			</section>
+			<section>
+				<p>
+					<strong>Primeros Auxilios para Ahogamientos</strong>: Procedimientos aplicados a personas que han sufrido un accidente en el agua, como la reanimación cardiopulmonar (RCP) específica para ahogamientos y técnicas para eliminar el agua de las vías respiratorias.
+				</p>
+			</section>
+		</div>
+
+		<section id="chat-modelo">
+		    <h2 class="titulo-seccion">03. Especialista</h2>
+
+		    <div class="chat-container">
+		        <div id="chat-window">
+		            <div class="mensaje bot">
+		                ¡Hola! Soy tu especialista virtual en TeleSalud. ¿En qué puedo ayudarte hoy?
+		            </div>
+		        </div>
+
+		        <div class="input-container">
+		            <input type="text" id="userInput" placeholder="Escribe tu mensaje aquí...">
+		            <button onclick="enviarMensaje()">Enviar</button>
+		        </div>
+		    </div>
+		</section>
+
+		<div id="comentarios">
+			<h2>💬 Comentarios</h2>
+
+			<form id="form-comentarios">
+			    <input type="hidden" name="especializacion" value="{{ especializacion }}">
+
+			    <input type="text" name="nombre" placeholder="Tu nombre (opcional)">
+			    <br><br>
+
+			    <textarea name="comentario" placeholder="Escribe tu comentario..." required></textarea>
+			    <br><br>
+
+			    <button type="submit">Enviar comentario</button>
+			</form>
+
+			<hr>
+
+			<div class="lista-comentarios">
+			    {% for c in comentarios %}
+			        <div class="comentario">
+			            <strong>{{ c.nombre or "Usuario anónimo" }}</strong>
+			            <p>{{ c.comentario }}</p>
+			        </div>
+			        <hr>
+			    {% endfor %}
+			</div>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}	
+</body>
+</html>

@@ -1,0 +1,137 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleSalud Con IA / Inteligencia Artificial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/IA.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+    <!-- BootStrap -->
+    {{ bootstrap() }}
+</head>
+<body>
+    {{ barra_navegacion() }}
+
+    <main>
+        <h1 class="animacion">✨ Inteligencia Artificial ✨</h1>
+
+        <div class="contenido-enlaces">
+            <h3>Índice de</h3>
+            <h2>CONTENIDOS</h2>
+            <br>
+
+            <table>
+                <tr>
+                    <td><a href="#definicion">01. Definición</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#tipos">02. Tipos de IA</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#aplicaciones">03. Aplicaciones</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#riesgos">04. Riesgos y Ética</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ==================== 01. DEFINICIÓN ==================== -->
+        <div id="definicion">
+            <br>
+            <audio src="{{ url_for('static', filename='Audio/IA.wav') }}" controls></audio>
+
+            <h2 class="animacion">01. Definición</h2>
+            <img src="{{ url_for('static', filename='IMG/IA_Definicion.jpg') }}" alt="Inteligencia Artificial" class="animacion">
+
+            <p>
+                La Inteligencia Artificial (IA) es un campo de la informática que desarrolla sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el razonamiento, el aprendizaje, la percepción, el análisis de datos y la toma de decisiones. 
+                Utiliza modelos matemáticos, algoritmos y redes neuronales para simular procesos cognitivos y resolver problemas con eficiencia.
+            </p>
+        </div>
+
+        <!-- ==================== 02. TIPOS DE IA ==================== -->
+        <div id="tipos">
+            <h2 class="animacion">02. Tipos de IA</h2>
+
+            <dl>
+                <dt>
+                    <img src="{{ url_for('static', filename='IMG/IA_Debil.jpg') }}" alt="IA Débil" class="animacion"><br>
+                    <h3>IA Débil o Estrecha</h3>
+                </dt>
+                <dd>
+                    Sistemas diseñados para realizar una tarea específica, como asistentes virtuales, chatbots o sistemas de recomendación.
+                </dd>
+
+                <dt>
+                    <img src="{{ url_for('static', filename='IMG/IA_Fuerte.jpg') }}" alt="IA Fuerte" class="animacion"><br>
+                    <h3>IA Fuerte</h3>
+                </dt>
+                <dd>
+                    Una IA hipotética capaz de razonar y aprender de forma autónoma, igualando o superando la inteligencia humana.
+                </dd>
+
+                <dt>
+                    <img src="{{ url_for('static', filename='IMG/Aprendizaje.jpg') }}" alt="Machine Learning" class="animacion"><br>
+                    <h3>Machine Learning</h3>
+                </dt>
+                <dd>
+                    Rama de la IA que permite a los sistemas aprender de los datos mediante patrones, predicciones y modelos estadísticos.
+                </dd>
+
+                <dt>
+                    <img src="{{ url_for('static', filename='IMG/Deep.jpg') }}" alt="Deep Learning" class="animacion"><br>
+                    <h3>Deep Learning</h3>
+                </dt>
+                <dd>
+                    Técnicas basadas en redes neuronales profundas que replican el funcionamiento del cerebro humano para procesar información compleja.
+                </dd>
+            </dl>
+        </div>
+
+        <!-- ==================== 03. APLICACIONES ==================== -->
+        <div id="aplicaciones">
+            <h2 class="animacion">03. Aplicaciones</h2>
+
+            <p>
+                La IA está presente en múltiples áreas:
+            </p>
+
+            <section>
+	            <ul>
+	                <li><strong>Medicina:</strong> diagnóstico asistido, análisis de imágenes, seguimiento de pacientes.</li>
+	                <li><strong>Educación:</strong> tutores virtuales, análisis de aprendizaje.</li>
+	                <li><strong>Industria:</strong> automatización, robótica, control de calidad.</li>
+	                <li><strong>Ciberseguridad:</strong> detección de amenazas y anomalías.</li>
+	                <li><strong>Transporte:</strong> vehículos autónomos y optimización de rutas.</li>
+	            </ul>
+            </section>
+        </div>
+
+        <!-- ==================== 04. RIESGOS Y ÉTICA ==================== -->
+        <div id="riesgos">
+            <h2 class="animacion">04. Riesgos y Ética</h2>
+
+            <p>
+                Aunque la IA ofrece grandes beneficios, también presenta riesgos que deben abordarse con una regulación adecuada:
+            </p>
+
+            <section>
+            	<ul>
+	                <li>Privacidad y manejo de datos sensibles.</li>
+	                <li>Bias o sesgos que afectan decisiones automatizadas.</li>
+	                <li>Dependencia tecnológica excesiva.</li>
+	                <li>Desplazamiento laboral debido a la automatización.</li>
+	                <li>Uso indebido en vigilancia o manipulación social.</li>
+            	</ul>
+            </section>
+        </div>
+    </main>
+
+    {{ footer() }}
+    {{ scripts() }}
+
+</body>
+</html>

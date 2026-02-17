@@ -1,0 +1,33 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main class="animacion">
+		<video src="{{ url_for('static', filename='IMG/Video_Principal.mp4') }}" type="video/mp4" controls loop></video>
+		<audio src="{{ url_for('static', filename='Audio/Pagina_Inicial.mp3') }}" controls></audio>
+
+		<p>
+			<span>TeleSalud:</span> haciendo posible la sanación a través de la tecnología y la empatía. 
+		</p>
+
+		<h1>TeleSalud <br>con IA</h1>
+		<h2>TeleCuidado</h2>
+	</main> 
+
+	{{ footer() }}
+	{{ scripts() }}	
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+* {
+	text-align: center;
+	color: #3B365F;	
+	font-family: "Georgia", sans-serif;
+}
+
+/* Propiedades compartidas */
+nav, .contenido-enlaces, footer {
+	background-color: #FFB5CA;
+}
+
+#definicion h2, #tipos h2 {
+	background-color: #3B365F;
+	color: whitesmoke;
+	width: 20%;
+	border-radius: 1rem;
+	position: relative;
+}
+
+.contenido-enlaces, #tipos dl dd {
+	width: 20%;
+}
+
+nav a img {
+	transition: transform 0.5s ease;	
+}
+
+nav a img:hover {
+	transform: scale(1.2);
+}
+
+main h1 {
+	margin: 60px;
+	font-size: 50px;
+} 
+
+.contenido-enlaces {
+	position: fixed;
+	padding: 20px;
+	border-radius: 1rem;
+	transition: opacity 0.5s ease;
+}
+
+.contenido-enlaces table td {
+	text-align: left;
+}
+
+.contenido-enlaces a {
+	text-decoration: none;
+	color: #3B365F;	
+}
+
+.contenido-enlaces a:hover {
+	color: black;
+	font-size: 18px;
+}
+
+#definicion audio {
+	position: fixed;
+	margin-left: 21%;
+}
+
+#definicion h2 {
+	left: 40%;
+}
+
+#definicion img {
+	border-radius: 1rem;
+	margin: 30px;
+}
+
+#definicion p {
+	position: relative;
+	left: 30%;
+	text-align: justify;
+	width: 40%;
+	padding: 12px;
+}
+
+#tipos h2 {
+	margin: 50px;
+	left: 36%;
+}
+
+#tipos dl dd {
+	margin-top: 25px;
+	margin-bottom: 40px;
+	text-align: justify;	
+	position: relative;
+	left: 30%;
+	width: 40%;
+}
+
+footer {
+    background-color: #FFB5CA;
+    margin-top: 10%;
+    padding: 100px;
+    font-size: 18px;
+}
+
+footer img {
+    margin: 25px;
+    position: relative;
+    right: 40%;
+    bottom: 60px;
+}
+
+footer a {
+    color: black;
+	text-decoration: none;
+}
+
+footer a:hover {
+    color: whitesmoke;
+}
+
+footer ul {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 100px;
+    text-align: justify;
+}
+
+footer p {
+    text-align: right;
+    margin-bottom: -10px;
+    color: black;
+}
+
+/* Animación */
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.animacion {
+    opacity: 0;
+    position: relative;
+    top: 50px;
+    animation: slide-up 1s ease-out forwards;
+    animation-delay: 0.5s;
+}

@@ -1,0 +1,280 @@
+
+* {
+	text-align: center;
+	color: #3B365F;
+	font-family: "Georgia", sans-serif;	
+}
+
+/* Propiedades compartidas */
+nav, .contenido-enlaces, #tipos section {
+	background-color: #FFB5CA;
+}
+
+#definicion h2, #tipos h2 {
+	background-color: #3B365F;
+	color: whitesmoke;
+	width: 35%;
+	border-radius: 1rem;
+	position: relative;
+}
+
+.contenido-enlaces {
+	width: 20%;	
+}
+
+.contenido-enlaces, #definicion img, #tipos section {
+	border-radius: 1rem;
+}
+
+nav a img {
+	transition: transform 0.5s ease;	
+}
+
+nav a img:hover {
+	transform: scale(1.2);
+}
+
+main h1 {
+	margin: 60px;
+	font-size: 50px;
+} 
+
+.contenido-enlaces {
+	position: fixed;
+	padding: 20px;
+	transition: opacity 0.5s ease;
+}
+
+.contenido-enlaces table td {
+	text-align: left;
+}
+
+.contenido-enlaces a {
+	text-decoration: none;
+	color: #3B365F;	
+}
+
+.contenido-enlaces a:hover {
+	color: black;
+	font-size: 18px;
+}
+
+#definicion audio {
+	position: fixed;
+	margin-left: 25%;
+	z-index: 1;
+}
+
+#definicion h2 {
+	left: 33%;
+}
+
+#definicion img {
+	margin: 30px;
+}
+
+#definicion p {
+	position: relative;
+	left: 30%;
+	text-align: justify;
+	width: 40%;
+}
+
+#tipos h2 {
+	margin: 50px;
+	left: 30%;
+}
+
+#tipos section {
+	width: 40%;
+	position: relative;
+	left: 30%;
+	padding: 20px;
+	margin: 20px;
+	transition: width 0.5s ease;
+}
+
+#tipos section:hover {
+	width: 50%;
+}
+
+#tipos section p {
+	text-align: justify;
+}
+
+#tipos section p strong {
+	font-size: 20px;
+}
+
+#chat-modelo {
+    text-align: center;
+    padding: 40px 10px;
+    font-family: Georgia, serif;
+}
+
+.titulo-seccion {
+    font-size: 2.2rem;
+    color: #3B365F;
+    margin-bottom: 20px;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    background: #F7F4FA;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#chat-window {
+    height: 350px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    border: 1px solid #FFB5CA;
+}
+
+.mensaje {
+    max-width: 80%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.mensaje.usuario {
+    background: #F4B6C2;
+    color: #3B2460;
+    margin-left: auto;
+    border-bottom-right-radius: 0px;
+}
+
+.mensaje.bot {
+    background: #FADADD;
+    color: #3B2460;
+    margin-right: auto;
+    border-bottom-left-radius: 0px;
+}
+
+.input-container {
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+#userInput {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #FFB5CA;
+}
+
+button {
+    padding: 12px 20px;
+    background: #FFB5CA;
+    color: black;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#comentarios {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+textarea, input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #ff8db3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff6fa1;
+}
+
+.comentario {
+    background: #f1f3f6;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #FFB5CA;
+    margin-top: 10%;
+    padding: 100px;
+    font-size: 18px;
+}
+
+footer:has(.contenido-enlaces) .contenido-enlaces {
+    opacity: 0;
+}
+
+footer img {
+    margin: 25px;
+    position: relative;
+    right: 40%;
+    bottom: 60px;
+}
+
+footer a {
+    color: black;
+	text-decoration: none;
+}
+
+footer a:hover {
+    color: whitesmoke;
+}
+
+footer ul {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 100px;
+    text-align: justify;
+}
+
+footer p {
+    text-align: right;
+    margin-bottom: -10px;
+    color: black;
+}
+
+/* Animación */
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.animacion {
+    opacity: 0;
+    position: relative;
+    top: 50px;
+    animation: slide-up 1s ease-out forwards;
+    animation-delay: 0.5s;
+}

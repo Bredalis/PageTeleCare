@@ -1,0 +1,133 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Medicina General</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Especializaciones.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Medicina General ✨</h1>
+		<div class="contenido-enlaces">
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#chat-modelo">03. Especialista</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#comentarios">04. Comentario</a>
+					</td>
+				</tr>		
+			</table>
+		</div>
+
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Medicina_General.mp3') }}" controls></audio>
+			
+			<h2 class="animacion">01. Definición de Medicina General</h2>
+			<img src="{{ url_for('static', filename='IMG/Medico_General.jpg') }}" alt="Medicina General" class="animacion">
+
+			<p>
+				La Medicina General, también conocida como Medicina Familiar o Medicina Interna en algunos contextos, es una especialidad médica que se centra en la atención integral y continua del individuo y la familia a lo largo de la vida. Los médicos generales son responsables de la prevención, diagnóstico y tratamiento de una amplia variedad de enfermedades y condiciones médicas, así como de la promoción de la salud y el bienestar general.
+			</p>		
+		</div>
+
+		<div id="tipos" class="animacion">
+			<h2>02. Tipos de Medicina General</h2>
+
+			<section>
+				<p>
+					<strong>Medicina Familiar</strong>: Se centra en la atención médica continua e integral de individuos y familias a lo largo de sus vidas. Los médicos de familia tratan una variedad de enfermedades y condiciones, proporcionando atención preventiva, tratamiento de enfermedades agudas y manejo de enfermedades crónicas. Se enfocan en el cuidado holístico, considerando el contexto familiar y social del paciente.
+				</p>
+			</section>
+			<section>
+				<p>
+					<strong>Medicina Interna</strong>: Los médicos internistas se especializan en el diagnóstico, tratamiento y prevención de enfermedades en adultos. Tratan una amplia gama de condiciones médicas complejas y crónicas, como diabetes, hipertensión, enfermedades cardíacas y respiratorias. A menudo actúan como consultores para otros especialistas y brindan atención primaria a los adultos.
+				</p>	
+			</section>
+			<section>
+				<p>
+					<strong>Pediatría</strong>: Aunque es una especialidad en sí misma, la pediatría a menudo se superpone con la medicina general en la atención de niños y adolescentes. Los pediatras se enfocan en el crecimiento y desarrollo de los niños, así como en la prevención y tratamiento de enfermedades pediátricas.
+				</p>		
+			</section>
+			<section>
+				<p>
+					<strong>Geriatría</strong>: Esta subespecialidad de la medicina general se centra en la atención de los ancianos. Los geriatras abordan los problemas de salud únicos de la población envejecida, incluyendo enfermedades crónicas, polifarmacia, movilidad, y problemas cognitivos como la demencia.
+				</p>
+			</section>
+		</div>
+
+		<section id="chat-modelo">
+		    <h2 class="titulo-seccion">03. Especialista</h2>
+
+		    <div class="chat-container">
+		        <div id="chat-window">
+		            <div class="mensaje bot">
+		                ¡Hola! Soy tu especialista virtual en TeleSalud. ¿En qué puedo ayudarte hoy?
+		            </div>
+		        </div>
+
+		        <div class="input-container">
+		            <input type="text" id="userInput" placeholder="Escribe tu mensaje aquí...">
+		            <button onclick="enviarMensaje()">Enviar</button>
+		        </div>
+		    </div>
+		</section>
+
+		<div id="comentarios">
+			<h2>💬 Comentarios</h2>
+
+			<form id="form-comentarios">
+			    <input type="hidden" name="especializacion" value="{{ especializacion }}">
+
+			    <input type="text" name="nombre" placeholder="Tu nombre (opcional)">
+			    <br><br>
+
+			    <textarea name="comentario" placeholder="Escribe tu comentario..." required></textarea>
+			    <br><br>
+
+			    <button type="submit">Enviar comentario</button>
+			</form>
+
+			<hr>
+
+			<div class="lista-comentarios">
+			    {% for c in comentarios %}
+			        <div class="comentario">
+			            <strong>{{ c.nombre or "Usuario anónimo" }}</strong>
+			            <p>{{ c.comentario }}</p>
+			        </div>
+			        <hr>
+			    {% endfor %}
+			</div>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}	
+</body>
+</html>

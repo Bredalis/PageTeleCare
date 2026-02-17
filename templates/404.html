@@ -1,0 +1,24 @@
+{% from "Macros.jinja2" import footer %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Página No Encontrada</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/404.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+</head>
+<body>
+	<main class="animacion">
+		<h1><strong>4</strong>0<strong>4</strong></h1>
+		
+		<img src="{{ url_for('static', filename='IMG/Logo.png') }}">
+		<h2><strong>Página</strong> No Encontrada</h2>
+		<p><a href="{{ url_for('index') }}">Volver a la página principal</a></p>
+		<audio src="{{ url_for('static', filename='Audio/404.mp3') }}" controls></audio>
+	</main> 
+
+	{{ footer() }}	
+</body>
+</html>

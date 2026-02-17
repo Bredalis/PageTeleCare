@@ -1,0 +1,135 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Ginecología y Obstetricia</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Especializaciones.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Ginecología y Obstetricia ✨</h1>
+		<div class="contenido-enlaces">
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#chat-modelo">03. Especialista</a>
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						<a href="#comentarios">04. Comentario</a>
+					</td>
+				</tr>	
+			</table>
+		</div>
+	
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Ginecologia.mp3') }}" controls></audio>
+
+			<h2 class="animacion">01. Definición de Ginecología y Obstetricia</h2>
+			<img src="{{ url_for('static', filename='IMG/Ginecologia.jpg') }}" alt="Ginecología">
+
+			<p>
+				Ginecología y Obstetricia es una especialidad médica que se centra en la salud reproductiva de las mujeres y en el manejo del embarazo, el parto y el posparto. La ginecología abarca el diagnóstico y tratamiento de enfermedades y trastornos del sistema reproductivo femenino, mientras que la obstetricia se enfoca en el cuidado de las mujeres durante el embarazo y el parto, así como en el periodo posparto.
+			</p>		
+		</div>
+
+		<div id="tipos" class="animacion">
+			<h2>02. Tipos de Ginecología y Obstetricia</h2>
+
+			<section>
+				<p>
+					<strong>Ginecología General</strong>: Se ocupa de la salud reproductiva de la mujer en todas las etapas de su vida, desde la adolescencia hasta la menopausia. Esto incluye la evaluación y tratamiento de problemas menstruales, infecciones, enfermedades de transmisión sexual, y otras afecciones ginecológicas comunes.
+				</p>
+			</section>
+			<section>
+				<p>
+					<strong>Oncología Ginecológica</strong>: Especialidad dedicada al diagnóstico y tratamiento de los cánceres del sistema reproductivo femenino, incluyendo cáncer de ovario, útero, cuello uterino y vulva. Los oncólogos ginecológicos también se encargan de la prevención y detección temprana de estos cánceres.
+				</p>	
+			</section>
+			<section>
+				<p>
+					<strong>Endocrinología Reproductiva e Infertilidad</strong>: Esta subespecialidad se centra en el tratamiento de los problemas hormonales y la infertilidad. Los endocrinólogos reproductivos diagnostican y tratan trastornos hormonales, y desarrollan planes de tratamiento para ayudar a las parejas a concebir.
+
+
+				</p>		
+			</section>
+			<section>
+				<p>
+					<strong>Medicina Reproductiva</strong>: Se centra en la salud reproductiva y el tratamiento de la infertilidad mediante tecnologías avanzadas de reproducción asistida, como la fertilización in vitro (FIV), inseminación artificial, y otras técnicas para ayudar a las parejas a lograr un embarazo.
+				</p>
+			</section>
+		</div>
+
+		<section id="chat-modelo">
+		    <h2 class="titulo-seccion">03. Especialista</h2>
+
+		    <div class="chat-container">
+		        <div id="chat-window">
+		            <div class="mensaje bot">
+		                ¡Hola! Soy tu especialista virtual en TeleSalud. ¿En qué puedo ayudarte hoy?
+		            </div>
+		        </div>
+
+		        <div class="input-container">
+		            <input type="text" id="userInput" placeholder="Escribe tu mensaje aquí...">
+		            <button onclick="enviarMensaje()">Enviar</button>
+		        </div>
+		    </div>
+		</section>
+
+		<div id="comentarios">
+			<h2>💬 Comentarios</h2>
+
+			<form id="form-comentarios">
+			    <input type="hidden" name="especializacion" value="{{ especializacion }}">
+
+			    <input type="text" name="nombre" placeholder="Tu nombre (opcional)">
+			    <br><br>
+
+			    <textarea name="comentario" placeholder="Escribe tu comentario..." required></textarea>
+			    <br><br>
+
+			    <button type="submit">Enviar comentario</button>
+			</form>
+
+			<hr>
+
+			<div class="lista-comentarios">
+			    {% for c in comentarios %}
+			        <div class="comentario">
+			            <strong>{{ c.nombre or "Usuario anónimo" }}</strong>
+			            <p>{{ c.comentario }}</p>
+			        </div>
+			        <hr>
+			    {% endfor %}
+			</div>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}
+</body>
+</html>

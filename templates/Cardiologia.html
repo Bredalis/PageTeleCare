@@ -1,0 +1,133 @@
+{% from "Macros.jinja2" import barra_navegacion, footer, bootstrap, scripts %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeleSalud Con IA/Cardiología</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Especializaciones.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<!-- BootStrap -->
+	{{ bootstrap() }}
+</head>
+<body>
+	{{ barra_navegacion() }}
+
+	<main>
+		<h1 class="animacion">✨ Cardiología ✨</h1>
+		<div class="contenido-enlaces">
+			<h3>Índice de</h3>
+			<h2>CONTENIDOS</h2>
+
+			<table>
+				<tr>
+					<td>
+						<a href="#definicion">01. Definición</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#tipos">02. Tipos</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#chat-modelo">03. Especialista</a>
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						<a href="#comentarios">04. Comentario</a>
+					</td>
+				</tr>	
+			</table>
+		</div>		
+
+		<div id="definicion">
+			<br>
+			<audio src="{{ url_for('static', filename='Audio/Cardiologia.mp3') }}" controls></audio>
+
+			<h2 class="animacion">01. Definición de Cardiología</h2>
+			<img src="{{ url_for('static', filename='IMG/Cardiologo.jpg') }}" alt="Cardiología" class="animacion">
+
+			<p>
+				La cardiología es la rama de la medicina especializada en el diagnóstico, tratamiento y prevención de enfermedades del corazón y del sistema cardiovascular. Los cardiólogos son médicos expertos en evaluar la salud del corazón, desde problemas simples hasta enfermedades complejas que afectan su funcionamiento.
+			</p>		
+		</div>
+
+		<div id="tipos" class="animacion">
+			<h2>02. Tipos de Cardiología</h2>
+
+			<section>
+				<p>
+					<strong>Cardiología Clínica</strong>: Se centra en el diagnóstico y tratamiento de enfermedades cardiovasculares mediante el uso de herramientas como electrocardiogramas (ECG), ecocardiografías y pruebas de esfuerzo. Los cardiólogos clínicos manejan condiciones como la hipertensión arterial, la insuficiencia cardíaca y las arritmias.
+				</p>
+			</section>
+			<section>
+				<p>
+					<strong>Cardiología Intervencionista</strong>: Utiliza procedimientos mínimamente invasivos para tratar enfermedades cardiovasculares, como la angioplastia coronaria y la colocación de stents para abrir arterias bloqueadas. Los cardiólogos intervencionistas son especialistas en técnicas que restauran el flujo sanguíneo al corazón.
+				</p>	
+			</section>
+			<section>
+				<p>
+					<strong>Electrofisiología Cardíaca</strong>: Se enfoca en el estudio y tratamiento de las arritmias cardíacas, que son alteraciones en el ritmo eléctrico del corazón. Los electrofisiólogos cardíacos utilizan estudios electrofisiológicos para diagnosticar y técnicas como la ablación por catéter para corregir ritmos anormales.
+				</p>		
+			</section>
+			<section>
+				<p>
+					<strong>Cardiología Preventiva</strong>: Se concentra en la prevención de enfermedades cardiovasculares a través de la educación, cambios en el estilo de vida y el tratamiento temprano de factores de riesgo como la hipertensión, el colesterol alto y la diabetes. Los cardiólogos preventivos promueven hábitos saludables y estrategias de manejo del riesgo cardiovascular.
+				</p>
+			</section>
+		</div>
+
+		<section id="chat-modelo">
+		    <h2 class="titulo-seccion">03. Especialista</h2>
+
+		    <div class="chat-container">
+		        <div id="chat-window">
+		            <div class="mensaje bot">
+		                ¡Hola! Soy tu especialista virtual en TeleSalud. ¿En qué puedo ayudarte hoy?
+		            </div>
+		        </div>
+
+		        <div class="input-container">
+		            <input type="text" id="userInput" placeholder="Escribe tu mensaje aquí...">
+		            <button onclick="enviarMensaje()">Enviar</button>
+		        </div>
+		    </div>
+		</section>
+
+		<div id="comentarios">
+			<h2>💬 Comentarios</h2>
+
+			<form id="form-comentarios">
+			    <input type="hidden" name="especializacion" value="{{ especializacion }}">
+
+			    <input type="text" name="nombre" placeholder="Tu nombre (opcional)">
+			    <br><br>
+
+			    <textarea name="comentario" placeholder="Escribe tu comentario..." required></textarea>
+			    <br><br>
+
+			    <button type="submit">Enviar comentario</button>
+			</form>
+
+			<hr>
+
+			<div class="lista-comentarios">
+			    {% for c in comentarios %}
+			        <div class="comentario">
+			            <strong>{{ c.nombre or "Usuario anónimo" }}</strong>
+			            <p>{{ c.comentario }}</p>
+			        </div>
+			        <hr>
+			    {% endfor %}
+			</div>
+		</div>
+	</main>
+
+	{{ footer() }}
+	{{ scripts() }}
+</body>
+</html>
