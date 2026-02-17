@@ -1,4 +1,3 @@
-````html
 <h1><b>🏥 PageTeleCare 🩺</b></h1>
 <a href="https://lenguajehtml.com/" target="_blank"> 
   <img src="https://img.shields.io/badge/HTML-E74C3C">
@@ -28,13 +27,9 @@
   ayudando a los usuarios a gestionar sus preocupaciones médicas de manera eficiente.   
 </p>
 
----
-
 # 🧠 TeleSalud con Inteligencia Artificial
 
 > Plataforma web educativa que permite conocer especialidades médicas mediante chatbots con IA, incluyendo sistema de comentarios, interacción con usuarios y filtrado ético de consultas médicas.
-
----
 
 ## Índice de Contenidos 🧾
 
@@ -53,15 +48,11 @@
 - Futuras Mejoras 🔮
 - Licencia 📜
 
----
-
 ## Descripción 📝
 
 PageTeleCare es una plataforma web orientada al sector salud que utiliza inteligencia artificial para ofrecer orientación médica educativa mediante chatbots especializados por áreas médicas.
 
 Incluye un sistema de interacción con usuarios, almacenamiento de comentarios y filtros de seguridad para consultas potencialmente peligrosas.
-
----
 
 ## Objetivo del Proyecto 🎯
 
@@ -70,8 +61,6 @@ Incluye un sistema de interacción con usuarios, almacenamiento de comentarios y
 - Facilitar interacción entre usuarios y contenido sanitario.
 - Ofrecer una herramienta tecnológica para instituciones de salud.
 
----
-
 ## Público Objetivo 👥
 
 - Pacientes
@@ -79,8 +68,6 @@ Incluye un sistema de interacción con usuarios, almacenamiento de comentarios y
 - Personal sanitario
 - Empresas del sector salud
 - Programadores interesados en HealthTech
-
----
 
 ## Características Principales ✨
 
@@ -91,8 +78,6 @@ Incluye un sistema de interacción con usuarios, almacenamiento de comentarios y
 - 📊 Base de datos SQLite
 - 🌐 Interfaz web responsiva
 - 📁 Arquitectura Flask modular
-
----
 
 ## Arquitectura del Sistema 🏗️
 
@@ -116,8 +101,6 @@ IA:
 Base de datos:
 
 - SQLite (`comentarios.db`)
-
----
 
 ## Estructura de Carpetas 📂
 
@@ -156,8 +139,6 @@ PageTeleCare/
 └── README.md
 ````
 
----
-
 ## Instalación 📥
 
 Sigue estos pasos para configurar el proyecto en tu entorno local:
@@ -181,7 +162,6 @@ Abrir navegador:
 http://127.0.0.1:5000
 ```
 
----
 
 ## Uso ⚙️
 
@@ -199,7 +179,6 @@ python App.py
 http://127.0.0.1:5000
 ```
 
----
 
 ## 🚀 Despliegue en Render.com
 
@@ -231,7 +210,6 @@ La aplicación expone la variable `app` mediante:
 app = pagina_telecuidado()
 ```
 
----
 
 ### Base de Datos en Producción
 
@@ -246,7 +224,6 @@ instance/comentarios.db
 En Render los archivos SQLite son temporales.
 Para producción empresarial se recomienda PostgreSQL.
 
----
 
 ### Despliegue Continuo
 
@@ -258,7 +235,6 @@ git push origin master
 
 Render reconstruye automáticamente la aplicación.
 
----
 
 ## API Endpoints 🔌
 
@@ -280,7 +256,6 @@ Respuesta:
 }
 ```
 
----
 
 ### POST /comentarios
 
@@ -292,7 +267,6 @@ Campos:
 * comentario
 * especializacion
 
----
 
 ## Base de Datos 💾
 
@@ -313,7 +287,6 @@ Ubicación:
 instance/comentarios.db
 ```
 
----
 
 ## Seguridad y Ética ⚠️
 
@@ -321,7 +294,6 @@ instance/comentarios.db
 * No reemplaza atención médica profesional.
 * Orientación educativa únicamente.
 
----
 
 ## Uso Empresarial 🏥
 
@@ -333,7 +305,6 @@ Posibles aplicaciones:
 * Plataformas de e-learning médico
 * Telemedicina
 
----
 
 ## Futuras Mejoras 🔮
 
@@ -344,14 +315,12 @@ Posibles aplicaciones:
 * IA más avanzada
 * Integración con APIs médicas reales
 
----
 
 ## Licencia 📜
 
 Este proyecto está licenciado bajo la Licencia
 GPLv3 (GNU General Public License V3.0)
 
----
 
 ## 👩‍💻 Autor
 
@@ -360,7 +329,6 @@ Programadora Web & AI Developer
 
 <a href="https://github.com/bredalis">GitHub</a> <a href="https://www.linkedin.com/in/bredalis-gautreaux/">LinkedIn</a>
 
----
 
 ## <img src="https://avatars.githubusercontent.com/u/111624948?s=400&v=4" width="50" height="50"> <img src="https://readme-typing-svg.demolab.com?font=Roboto+Slab&color=%23FFFFFF&size=35&center=true&vCenter=true&width=450&duration=1500&pause=1000&lines=Hola,+soy;Bredalis+Gautreaux!" width="auto" height="35"/>
 
@@ -369,5 +337,3 @@ Programadora Web & AI Developer
 ## Mira mi perfil de GitHub:
 
 [![Web](https://img.shields.io/badge/GitHub-Bredalis-14a1f0?style=for-the-badge\&logo=github\&logoColor=white\&labelColor=101010)](https://github.com/bredalis)
-
-```
